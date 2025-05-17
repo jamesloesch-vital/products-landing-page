@@ -1,0 +1,1625 @@
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/LTSuperior-Regular.woff2') format('woff2'),
+         url('fonts/LTSuperior-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LT Superior';
+    src: url('fonts/LTSuperior-Medium.woff2') format('woff2'),
+         url('fonts/LTSuperior-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: 'LT Superior', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F5F0; /* Default Light Background */
+    color: #000000; /* Default Dark Text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: 'LT Superior', sans-serif;
+    cursor: pointer;
+    border: none;
+    padding: 17px 36px; /* Updated padding */
+    border-radius: 50px; /* Updated border radius */
+    font-weight: 500; /* Add default font-weight */
+    font-size: 17px; /* Add default font-size */
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px; /* Increased from 20px to 40px */
+}
+
+/* Add responsive padding for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px; /* Slightly less padding on mobile but still more than before */
+    }
+}
+
+/* Add even smaller padding for very small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px; /* Minimum padding for very small screens */
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #9A805B, #342B1F);
+    padding: 15px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 30px; /* Adjust as needed */
+}
+
+.navbar-cta {
+    background-color: #F8F5F0; /* Button Light */
+    color: #000000; /* Dark Text */
+    /* font-weight: 500; */ /* Covered by base button style */
+    /* font-size: 17px; */ /* Covered by base button style */
+    /* padding: 10px 20px; */ /* Remove specific padding */
+    /* border-radius: 8px; */ /* Remove specific border-radius */
+}
+
+/* Styles for Navbar Contact Info */
+.navbar-logo-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.navbar-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px; /* Space below logo */
+    font-size: 14px;
+    color: #F9F7F3; /* Light Text */
+    opacity: 0.8;
+}
+
+.navbar-contact svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(to right, #9A805B, #342B1F);
+    color: #F9F7F3; /* Light Text */
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.hero-cta {
+    background-color: #F8F5F0; /* Button Light */
+    color: #000000; /* Dark Text */
+    /* font-weight: 500; */ /* Covered by base button style */
+    /* font-size: 17px; */ /* Covered by base button style */
+    /* padding: 15px 30px; */ /* Remove specific padding */
+    /* border-radius: 8px; */ /* Remove specific border-radius */
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 40px; */ /* Removed margin-top */
+    order: -1; /* Place image above text */
+    /* margin-bottom: 40px; */ /* Add space below image */
+    margin-bottom: 0; /* Removed space below image */
+}
+
+.hero-image-bg {
+    background-color: rgba(255, 255, 255, 0.2); /* #FFFFFF with 20% opacity */
+    border-radius: 20px;
+    width: 608px;
+    height: 580px;
+    backdrop-filter: blur(98px);
+    -webkit-backdrop-filter: blur(98px); /* For Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    display: block;
+    width: 235px;
+    height: 450.46px;
+}
+
+/* Responsive Styles (Example for Hero) */
+@media (max-width: 768px) {
+    /* Navbar Mobile Adjustments */
+    .navbar-container {
+        justify-content: center; /* Center the logo */
+    }
+    /* .navbar-logo { */
+        /* height: 25px; */ /* Make logo smaller */
+    /* } */
+    .navbar-logo-contact { /* Adjustments for the container */
+        align-items: center; /* Center logo and contact on mobile */
+    }
+    .navbar-logo {
+        height: 25px; /* Make logo smaller */
+    }
+    .navbar-contact {
+        display: none; /* Hide contact info on mobile */
+    }
+    .navbar-cta {
+        display: none; /* Hide GET STARTED button */
+    }
+
+    /* Hero Mobile Adjustments */
+    .hero-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 50px; /* Adjust font size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+
+    .hero-image-wrapper {
+        /* margin-top: 40px; */ /* Removed margin-top */
+        order: -1; /* Place image above text */
+        /* margin-bottom: 40px; */ /* Add space below image */
+        margin-bottom: 20px; /* Reduced space below image */
+    }
+
+    .hero-image-bg {
+        width: 325px;
+        height: 315px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 125px;
+        height: 255px;
+    }
+}
+
+/* Process Section Styles */
+.process {
+    background-color: #F8F5F0; /* Light Background */
+    padding: 80px 0;
+    text-align: center;
+    position: relative; /* Needed for pseudo-element */
+    overflow: hidden; /* Contain the pseudo-element */
+}
+
+.process-container {
+    position: relative; /* Ensure content is above pseudo-element */
+    z-index: 1;
+}
+
+.process h2 {
+    font-size: 48px; /* Adjust size as needed, PRD doesn't specify */
+    font-weight: 500;
+    color: #000000; /* Dark Text */
+    margin-bottom: 60px;
+}
+
+.process-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* flex-wrap: wrap; */ /* Removed */
+}
+
+.process-card {
+    background-color: #FFFFFF; /* Card Background */
+    border-radius: 20px;
+    padding: 50px 30px 40px 30px; /* Increased top padding */
+    /* width: calc(50% - 15px); */ /* Changed */
+    width: calc(25% - 22.5px); /* Changed: 4 cards across, 30px gap */
+    max-width: 371px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.process-step-indicator {
+    background-color: #9A805B; /* Gradient start color, solid fill */
+    color: #FFFFFF; /* Light Text */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex; /* Changed to inline-flex to respect text-align: center */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px; /* Increased bottom margin again for more space */
+}
+
+.process-card h3 {
+    font-size: 24px; /* Assuming Body Text size for card heading */
+    font-weight: 500;
+    color: #000000; /* Dark Text */
+    margin-bottom: 15px;
+}
+
+.process-card p {
+    font-size: 18px; /* Slightly smaller than Body Text */
+    font-weight: 400;
+    color: #333; /* Slightly lighter dark text */
+    line-height: 1.6;
+}
+
+/* Optional: Background Ellipse Element */
+.process::before {
+    content: '';
+    position: absolute;
+    width: 1200px; /* Large size */
+    height: 600px; /* Adjust aspect ratio */
+    background-color: #E2D3BB; /* Ellipse color */
+    border-radius: 50%;
+    filter: blur(100px); /* Layer blur */
+    opacity: 0.5; /* Adjust opacity */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+
+/* Responsive Styles for Process Section */
+@media (max-width: 1200px) {
+    .process-cards {
+        gap: 30px; /* Keep gap consistent or adjust */
+        flex-wrap: wrap; /* Add wrap back for 2x2 grid */
+    }
+    .process-card {
+        /* width: calc(33.333% - 20px); */ /* Changed */
+        width: calc(50% - 15px); /* Changed: 2 cards across */
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .process h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    .process-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .process-card {
+        width: 80%;
+        max-width: 371px;
+    }
+    .process::before {
+        width: 800px;
+        height: 400px;
+        filter: blur(80px);
+    }
+}
+
+/* Explainer Section Styles */
+.explainer {
+    background-color: #F8F5F0; /* Light Background */
+    padding: 80px 0;
+}
+
+.explainer-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Adjust gap as needed */
+}
+
+.explainer-image-col {
+    flex: 1;
+    text-align: center; /* Center image if needed */
+}
+
+.explainer-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.explainer-content-col {
+    flex: 1;
+}
+
+/* Reusable Gradient Text Style */
+.gradient-text {
+    background: linear-gradient(to right, #9A805B, #342B1F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 500; /* Assuming header weight */
+    margin-bottom: 20px;
+    /* Add display: inline-block if needed for specific layouts */
+}
+
+.explainer-content-col h2 {
+    font-size: 48px; /* Example size, adjust as needed */
+     /* Gradient applied via .gradient-text class */
+}
+
+.explainer-content-col p {
+    font-size: 24px; /* Body Text size */
+    font-weight: 400; /* Body Text weight */
+    color: #333; /* Slightly lighter dark text */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.explainer-cta {
+    background-color: #9A805B; /* Matches step indicator, consider primary gradient? PRD says this color */
+    color: #FFFFFF; /* Light Text */
+    /* font-weight: 500; */ /* Covered by base button style */
+    /* font-size: 17px; */ /* Covered by base button style */
+    /* padding: 15px 30px; */ /* Remove specific padding */
+    /* border-radius: 8px; */ /* Remove specific border-radius */
+}
+
+/* Responsive Styles for Explainer Section */
+@media (max-width: 768px) {
+    .explainer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .explainer-content-col {
+        order: 2; /* Text below image on mobile */
+        text-align: left; /* Align text and button left */
+    }
+
+    .explainer-image-col {
+        order: 1; /* Image above text on mobile */
+    }
+
+    .explainer-content-col h2 {
+        font-size: 36px;
+    }
+
+    .explainer-content-col p {
+        font-size: 18px;
+    }
+}
+
+/* Stats Section Styles */
+.stats {
+    background-color: #816B4E; /* Stats Background */
+    padding: 80px 0;
+    color: #F9F7F3; /* Light Text */
+}
+
+.stats-container h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 40px; /* Adjust gap as needed */
+}
+
+.stat-card {
+    background-color: rgba(249, 247, 243, 0.1); /* Semi-transparent Light Text color, adjust opacity as needed */
+    border-radius: 20px;
+    padding: 40px;
+    /* Dimensions: 310px × 639px specified in PRD - this seems very tall? Let's use padding and let height be auto for now. */
+    /* width: 310px; Let grid handle width */
+    /* height: 639px; Let content determine height */
+    position: relative; /* For positioning the circle */
+}
+
+.stat-circle {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background-color: #C8AB8A; /* Lighter shade derived from background, adjust as needed */
+    border-radius: 50%;
+    position: absolute; /* Position top left */
+    top: 40px;
+    left: 40px;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #F9F7F3; /* Light Text color for the number */
+    font-size: 20px; /* Adjust number size as needed */
+    font-weight: 500; /* Make number slightly bold */
+    /* PRD says circle contains numbers 1,2,3,4, but image shows empty circles. Implementing empty circles for now. */
+}
+
+.stat-number {
+    font-size: 60px; /* Large font size for the stat */
+    font-weight: 500;
+    margin-top: 60px; /* Space below the circle */
+    margin-bottom: 10px;
+}
+
+.stat-placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.8; /* Make placeholder text slightly less prominent */
+}
+
+.stat-body {
+    font-size: 16px; /* Smaller text for body */
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Responsive Styles for Stats Section */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+        gap: 30px;
+    }
+
+    .stats-container h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        padding: 30px;
+        /* width: auto; Already handled by grid */
+        /* height: auto; Already handled by content */
+    }
+
+    .stat-circle {
+        top: 30px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .stat-number {
+        font-size: 48px;
+        margin-top: 50px; /* Adjust space */
+    }
+}
+
+/* Benefits Section Styles */
+.benefits {
+    background-color: #F8F5F0; /* Light Background */
+    padding: 80px 0;
+}
+
+.benefit-row {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Adjust gap as needed */
+    margin-bottom: 80px; /* Space between rows */
+}
+
+.benefit-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Reverse layout for alternating rows */
+.benefit-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.benefit-content {
+    flex: 1;
+}
+
+.benefit-content h3 {
+    font-size: 48px; /* Example size, adjust as needed */
+    /* Gradient applied via .gradient-text class */
+    margin-bottom: 20px;
+}
+
+.benefit-content p {
+    font-size: 18px; /* Smaller body text */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+.benefit-image {
+    flex: 1;
+    text-align: center; /* Center image within its column */
+}
+
+.benefit-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Add rounded corners to images */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+/* Responsive Styles for Benefits Section */
+@media (max-width: 768px) {
+    .benefit-row,
+    .benefit-row.reverse {
+        flex-direction: column; /* Stack all rows */
+        gap: 30px;
+        margin-bottom: 50px;
+        text-align: left; /* Left-align text */
+    }
+
+    .benefit-content h3 {
+        font-size: 36px;
+    }
+
+    .benefit-content p {
+        font-size: 16px;
+    }
+
+    /* Ensure image comes after text on mobile for reversed rows */
+    .benefit-row.reverse .benefit-content {
+        order: 1; 
+    }
+    .benefit-row.reverse .benefit-image {
+        order: 2;
+    }
+}
+
+/* Checkout Section Styles */
+.checkout {
+    background-color: #EEE9E2; /* Accent Background */
+    padding: 80px 0;
+}
+
+.checkout-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Adjust gap */
+}
+
+.checkout-image-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-image-bg {
+    background-color: #CEC0AD; /* Image Background color */
+    border-radius: 20px;
+    width: 579px; /* Set specific width */
+    height: 561.86px; /* Set specific height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-image {
+    display: block;
+    width: 223.79px; /* Set specific width */
+    height: 430.69px; /* Set specific height */
+}
+
+.checkout-content-col {
+    flex: 1;
+}
+
+.checkout-content-col h2 {
+    font-size: 48px; /* Example size */
+    /* Gradient applied via .gradient-text */
+    margin-bottom: 15px;
+}
+
+.checkout-subheading {
+    font-size: 20px; /* Example size */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.checkout-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.checkout-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px; /* Example size */
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.checkout-features img {
+    width: 20px; /* Adjust checkmark size */
+    height: 20px;
+}
+
+.checkout-pricing {
+    font-size: 48px; /* Large pricing text */
+    font-weight: 500;
+    color: #000000; /* Dark Text */
+    margin-bottom: 30px;
+}
+
+.checkout-pricing span {
+    font-size: 18px; /* Smaller '/month' */
+    font-weight: 400;
+    color: #555; /* Slightly lighter */
+    margin-left: 5px;
+}
+
+.strikethrough-price {
+    font-size: 22px;
+    font-weight: 400;
+    color: #E94545; /* Red color for strikethrough price */
+    text-decoration: line-through;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+span.strikethrough-price {
+    margin-left: 20px;
+    color: #E94545;
+}
+
+.checkout-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pricing-plan-dropdown {
+    background-color: #FFFFFF;
+    border: 1px solid #CEC0AD;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    min-width: 150px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.checkout-cta {
+    background-color: #906323; /* Button Accent */
+    color: #FFFFFF; /* Light Text */
+    /* font-weight: 500; */ /* Covered by base button style */
+    /* font-size: 17px; */ /* Covered by base button style */
+    /* padding: 15px 30px; */ /* Remove specific padding */
+    /* border-radius: 8px; */ /* Remove specific border-radius */
+}
+
+/* Checkout Section Pricing Cards - Mobile Responsive Updates */
+.checkout .pricing-cards {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0;
+    width: 100%;
+}
+
+.checkout .pricing-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2D3BB;
+    padding: 32px 24px;
+    position: relative;
+    min-width: 0; /* Allow cards to shrink below min-content */
+}
+
+.checkout .pricing-step {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: #342B1F;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout .pricing-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.checkout .pricing-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.checkout .pricing-badge {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.checkout .pricing-badge.pay-today {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22C55E;
+}
+
+.checkout .pricing-badge.pay-if {
+    background: rgba(245, 158, 27, 0.1);
+    color: #F59E1B;
+}
+
+.checkout .pricing-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin: 16px 0 8px;
+}
+
+.checkout .pricing-amount-period {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.checkout .pricing-desc {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .checkout .pricing-cards {
+        gap: 20px;
+    }
+    
+    .checkout .pricing-card {
+        padding: 28px 20px;
+    }
+    
+    .checkout .pricing-title {
+        font-size: 18px;
+    }
+    
+    .checkout .pricing-amount {
+        font-size: 28px;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .checkout-image-col {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .checkout-content-col {
+        order: 2;
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
+    }
+    .checkout .pricing-cards {
+        flex-direction: column;
+        gap: 32px;
+        margin: 24px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .checkout .pricing-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px 16px;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+    }
+    .checkout .pricing-step {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        top: -10px;
+        left: 20px;
+    }
+    .checkout .pricing-header-row {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .checkout .pricing-title {
+        font-size: 18px;
+    }
+    .checkout .pricing-badge {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .checkout .pricing-amount {
+        font-size: 26px;
+        margin: 12px 0 6px;
+    }
+    .checkout .pricing-amount-period {
+        font-size: 15px;
+    }
+    .checkout .pricing-desc {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile Breakpoint */
+@media (max-width: 480px) {
+    .checkout .pricing-cards {
+        gap: 24px;
+    }
+    
+    .checkout .pricing-card {
+        padding: 20px 16px;
+    }
+    
+    .checkout .pricing-step {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        top: -8px;
+        left: 16px;
+    }
+    
+    .checkout .pricing-header-row {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .checkout .pricing-title {
+        font-size: 16px;
+    }
+    
+    .checkout .pricing-badge {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    .checkout .pricing-amount {
+        font-size: 24px;
+        margin: 10px 0 4px;
+    }
+    
+    .checkout .pricing-amount-period {
+        font-size: 14px;
+    }
+    
+    .checkout .pricing-desc {
+        font-size: 13px;
+    }
+}
+
+/* FAQs Section Styles */
+.faqs {
+    background-color: #F8F5F0; /* Light Background */
+    padding: 80px 0;
+}
+
+.faqs-container {
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faqs-container h2 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #000000; /* Dark Text */
+    margin-bottom: 15px;
+}
+
+.faqs-subheading {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: #EEE9E2; /* Accent Background */
+    border-radius: 0px; /* Very rounded corners as per PRD */
+    overflow: hidden; /* Needed for smooth transition */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent; /* Inherit from .faq-item */
+    border: none;
+    padding: 20px 30px; /* Keep specific padding for FAQ button */
+    text-align: left;
+    font-family: 'LT Superior', sans-serif;
+    font-size: 18px; /* Keep specific font size */
+    font-weight: 500;
+    color: #000000; /* Dark Text */
+    cursor: pointer;
+    /* border-radius: 50px; */ /* Keep FAQ specific radius (or lack thereof) */
+}
+
+.faq-question span:first-child {
+    flex-grow: 1;
+    padding-right: 15px; /* Space between text and icon */
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #fff; /* Slightly different background for answer? Optional */
+    border-radius: 0px; /* Optional: Round bottom corners if bg differs */
+}
+
+.faq-answer p {
+    padding: 0 30px 20px 30px; /* Padding only when open */
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Style for when the FAQ item is active/open */
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust max-height as needed */
+    padding-top: 10px; /* Add padding when open */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Change + to x-like shape */
+}
+
+
+/* Responsive Styles for FAQs Section */
+@media (max-width: 768px) {
+    .faqs-container h2 {
+        font-size: 36px;
+    }
+    .faqs-subheading {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .faq-question {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+    .faq-answer p {
+        font-size: 15px;
+        padding: 0 25px 15px 25px;
+    }
+}
+
+/* Footer Section Styles */
+.footer {
+    background: linear-gradient(to right, #9A805B, #342B1F); /* Primary Gradient */
+    color: #F9F7F3; /* Light Text */
+    padding: 100px 0 50px 0; /* More padding top, less bottom */
+}
+
+.footer-container {
+    /* Standard container */
+}
+
+.footer-cta-component {
+    background-color: rgba(255, 255, 255, 0.1); /* White at 10% opacity */
+    border-radius: 190px; /* Updated radius */
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 800px; /* Limit width */
+    margin: 0 auto 60px auto; /* Center horizontally, add bottom margin */
+}
+
+.footer-cta-component h3 {
+    font-size: 40px; /* Adjust size */
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer-cta-component p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.footer-cta {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Dark Text */
+    /* font-weight: 500; */ /* Covered by base button style */
+    /* font-size: 17px; */ /* Covered by base button style */
+    /* padding: 15px 30px; */ /* Remove specific padding */
+    /* border-radius: 8px; */ /* Remove specific border-radius */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px; /* Space above bottom content */
+    border-top: 1px solid rgba(249, 247, 243, 0.2); /* Subtle separator line */
+}
+
+.footer-logo {
+    height: 30px; /* Match navbar logo height */
+    opacity: 0.8;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-contact svg {
+    width: 14px; /* Slightly smaller to match font */
+    height: 14px;
+    fill: currentColor;
+}
+
+.footer-legal {
+    text-align: right;
+}
+
+.footer-legal p {
+    margin: 0;
+    font-size: 14px; /* Smaller legal text */
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+.footer-legal .copyright {
+    margin-bottom: 5px;
+}
+
+
+/* Responsive Styles for Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 30px 0;
+    }
+    .footer-cta-component {
+        padding: 40px 25px;
+        border-radius: 40px;
+        margin-bottom: 40px;
+    }
+    .footer-cta-component h3 {
+        font-size: 32px;
+    }
+    .footer-cta-component p {
+        font-size: 16px;
+    }
+    .footer-bottom {
+        flex-direction: column; /* Stack logo and legal */
+        text-align: center;
+        gap: 20px;
+        padding-top: 30px;
+    }
+    .footer-logo-contact {
+        order: 1; /* Ensure logo + contact group comes first */
+        display: flex; /* Allow centering */
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-contact {
+        margin-top: 10px; /* Keep spacing consistent */
+    }
+    .footer-legal {
+        order: 2;
+        text-align: center;
+    }
+    .footer-legal p {
+        font-size: 12px;
+    }
+}
+
+/* Marketing Popup Styles */
+.marketing-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.marketing-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: #F8F5F0;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #342B1F;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-popup:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.popup-content h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #342B1F;
+}
+
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup-form input {
+    padding: 15px;
+    border: 1px solid #9A805B;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'LT Superior', sans-serif;
+}
+
+.popup-form input:focus {
+    outline: none;
+    border-color: #342B1F;
+}
+
+.popup-cta {
+    background: linear-gradient(to right, #9A805B, #342B1F);
+    color: #F8F5F0;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.popup-cta:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 30px;
+    }
+    
+    .popup-content h3 {
+        font-size: 24px;
+    }
+    
+    .popup-content p {
+        font-size: 16px;
+    }
+}
+
+/* Pricing Section Styles */
+.pricing {
+    background-color: #F8F5F0;
+    padding: 80px 0 40px 0;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pricing-cards {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.pricing-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.pricing-step {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pricing-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.pricing-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    padding-right: 16px;
+}
+
+.pricing-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.pricing-badge.pay-today {
+    background: rgba(46, 213, 115, 0.2);
+    color: #2ed573;
+}
+
+.pricing-badge.pay-if {
+    background: rgba(255, 159, 67, 0.2);
+    color: #ff9f43;
+}
+
+.pricing-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 16px 0;
+}
+
+.pricing-amount-period {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+    }
+    
+    .pricing-card {
+        width: 100%;
+    }
+}
+
+.promo-banner {
+    background: linear-gradient(90deg, #22C55E 0%, #16A34A 100%);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.promo-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.promo-banner strong {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* --- HERO PRODUCT ROW STYLES --- */
+.hero-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.hero-header h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+.hero-header p {
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+.hero-products-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #9A805B #342B1F;
+}
+.hero-products-row::-webkit-scrollbar {
+  height: 8px;
+}
+.hero-products-row::-webkit-scrollbar-thumb {
+  background: #9A805B;
+  border-radius: 8px;
+}
+.hero-products-row::-webkit-scrollbar-track {
+  background: #342B1F;
+}
+
+.hero-product-card {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  height: 480px;
+}
+
+.hero-product-image-bg {
+  background: rgba(255,255,255,0.55);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: 66.67%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(98px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1.5px solid rgba(255,255,255,0.25);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.hero-product-image {
+  width: auto;
+  max-width: 80%;
+  max-height: 90%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-product-info {
+  background: #342B1F;
+  padding: 24px;
+  height: 33.33%; /* 1/3 of the card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-product-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.hero-product-price {
+  color: #9A805B;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+
+.hero-product-price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-product-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.hero-learn-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.hero-learn-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-start-btn {
+  background: #9A805B;
+  color: #fff;
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.hero-start-btn:hover {
+  background: #816B4E;
+}
+
+@media (max-width: 900px) {
+  .hero-products-row {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .hero-product-card {
+    width: 100%;
+    max-width: 400px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-product-card {
+    height: 460px;
+  }
+  
+  .hero-product-title {
+    font-size: 18px;
+  }
+  
+  .hero-product-price {
+    font-size: 20px;
+  }
+  
+  /* Keep buttons side by side on mobile */
+  .hero-product-actions {
+    flex-direction: row;
+  }
+  .hero-learn-btn,
+  .hero-start-btn {
+    width: auto;
+  }
+}
