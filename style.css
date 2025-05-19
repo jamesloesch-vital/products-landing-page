@@ -637,20 +637,20 @@ button {
 .checkout-image-bg {
     background-color: #CEC0AD;
     border-radius: 20px;
-    width: 100%; /* Make it responsive */
-    height: 100%; /* Make it responsive */
-    aspect-ratio: 579 / 561.86; /* Maintain original aspect ratio */
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 579 / 561.86;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensures image doesn't overflow rounded corners */
+    overflow: hidden;
 }
 
 .checkout-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
-    border-radius: 20px; /* Match the container's border radius */
+    object-fit: cover;
+    border-radius: 20px;
     display: block;
 }
 
@@ -1457,6 +1457,10 @@ span.strikethrough-price {
 .hero-header {
   text-align: left;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
 }
 .hero-header h1 {
   font-size: 48px;
@@ -1635,8 +1639,8 @@ span.strikethrough-price {
   font-size: 17px;
   padding: 17px 36px;
   border-radius: 50px;
-  margin-top: 32px;
-  margin-bottom: 0;
+  margin-top: 18px;
+  margin-bottom: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   border: none;
@@ -1655,13 +1659,18 @@ span.strikethrough-price {
     width: 100%;
     font-size: 16px;
     padding: 15px 0;
-    margin-top: 24px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 480px) {
   .hero-doctor-btn {
     font-size: 15px;
     padding: 13px 0;
-    margin-top: 18px;
+    margin-top: 10px;
+    margin-bottom: 4px;
   }
 }
