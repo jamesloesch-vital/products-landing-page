@@ -130,7 +130,7 @@ button {
     font-size: 75px;
     font-weight: 500;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero-content p {
@@ -1466,7 +1466,7 @@ span.strikethrough-price {
   font-size: 48px;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   line-height: 1.1;
 }
 .hero-header p {
